@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            text-align: center;
+            height: 100vh;
+            background-color: #f4f4f4; /* Adding a light background color */
+        }
+        .container {
+            border: 20px solid tan;
+            width: 750px;
+            height: 563px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white; /* Adding a white background color */
+        }
+        .organization {
+            color: tan;
+            font-size: 28px;
+            margin-top: 0; /* Adjusted margin-top */
+        }
+        }
+        .logo {
+            margin-top: 10px;
+        }
+
+        .logo img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .marquee {
+            color: tan;
+            font-size: 48px;
+            margin: 20px;
+        }
+        .assignment {
+            margin: 20px;
+        }
+        .person {
+            border-bottom: 2px solid black;
+            font-size: 32px;
+            font-style: italic;
+            margin: 20px auto;
+            width: 400px;
+        }
+        .reason {
+            margin: 20px;
+        }
+        .download-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="organization">
+            An Organization
+        </div>
+
+        <div class="logo">
+            <img src="logo2.png" alt="Organization Logo">
+        </div>
+
+        <div class="marquee">
+            Certificate of Completion
+        </div>
+
+        <div class="assignment">
+            This certificate is presented to
+        </div>
+
+        <div class="person" id="fullName">
+            <!-- The intern's full name will be inserted here -->
+        </div>
+
+        <div class="reason">
+            For Completing Web Development Course <br/>
+        </div>
+
+        <button class="download-button" onclick="downloadCertificate()">Download Certificate</button>
+    </div>
+
+    <script>
+        function downloadCertificate() {
+            // Prompt the user for their full name
+            var fullName = window.prompt("Please enter your full name:");
+    
+            // If the user enters a name, update the person div with the provided name
+            if (fullName !== null && fullName !== "") {
+                document.getElementById('fullName').innerHTML = fullName;
+            }
+    
+            // Redirect to video.html after displaying the alert
+            window.location.href = 'video.html';
+        }
+    </script
+</body>
+</html>

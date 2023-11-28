@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Introduction to Web Development</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(14, 210, 102, 0.613);
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header h1 {
+            color: black; /* Change the heading color to black */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #3498db;
+        }
+
+        .module {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            display: none;
+        }
+
+        .quiz-question {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Module 1: Introduction to Web Development</h1>
+    </header>
+
+    <main>
+        <section class="module">
+            <h2>Overview</h2>
+            <p>
+                Welcome to Module 1! In this module, you will be introduced to the exciting world of web development.
+                We'll cover the basics, including what web development is, why it's important, and the fundamental
+                technologies involved.
+            </p>
+        </section>
+
+        <section class="module">
+            <h2>Topics Covered</h2>
+            <ul>
+                <li>Understanding the World Wide Web</li>
+                <li>Introduction to HTML</li>
+                <li>Introduction to CSS</li>
+                <li>Overview of Frontend and Backend</li>
+            </ul>
+        </section>
+
+        <section class="module">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/html_intro.asp">HTML Basics</a></li>
+                <li><a href="https://www.w3schools.com/css/default.asp">CSS Fundamentals</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xGmIl7QbBiA">Web Development Introduction Video</a></li>
+            </ul>
+        </section>
+
+        <section class="module">
+            <h2>Quiz</h2>
+            <p>
+                Test your knowledge with our Module 1 quiz. Click the button below to get started!
+            </p>
+            <button onclick="showQuiz()">Take Quiz</button>
+        </section>
+
+        <section class="module quiz-container" id="quiz-section">
+            <!-- Quiz Questions -->
+            <h2>Quiz Questions</h2>
+            <form id="quiz-form" onsubmit="submitQuiz(event)">
+                <div class="quiz-question">
+                    <p>1. What does HTML stand for?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q1" value="a"> a) HyperText Markup Language<br>
+                        <input type="radio" name="q1" value="b"> b) High-level Text Management Language<br>
+                        <input type="radio" name="q1" value="c"> c) HyperTransfer Text Language<br>
+                    </div>
+                </div>
+        
+                <div class="quiz-question">
+                    <p>2. What is the purpose of CSS?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q2" value="a"> a) Control the layout and presentation of HTML elements<br>
+                        <input type="radio" name="q2" value="b"> b) Handle server-side logic<br>
+                        <input type="radio" name="q2" value="c"> c) Store data in databases<br>
+                    </div>
+                </div>
+        
+                <div class="quiz-question">
+                    <p>3. What is JavaScript primarily used for?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q3" value="a"> a) Styling web pages<br>
+                        <input type="radio" name="q3" value="b"> b) Enhancing interactivity on web pages<br>
+                        <input type="radio" name="q3" value="c"> c) Creating databases<br>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>4. Which tag is used to define an unordered list in HTML?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q4" value="a"> a) &lt;ol&gt; <br>
+                        <input type="radio" name="q4" value="b"> b) &lt;ul&gt; <br>
+                        <input type="radio" name="q4" value="c"> c) &lt;li&gt; <br>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>5. What does the term "frontend" refer to in web development?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q5" value="a"> a) The server-side logic <br>
+                        <input type="radio" name="q5" value="b"> b) The part of the application users interact with <br>
+                        <input type="radio" name="q5" value="c"> c) The database management <br>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>6. Which HTML tag is used to create a hyperlink?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q6" value="a"> a) &lt;a&gt; <br>
+                        <input type="radio" name="q6" value="b"> b) &lt;link&gt; <br>
+                        <input type="radio" name="q6" value="c"> c) &lt;href&gt; <br>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>7. Which HTML tag is used to create a hyperlink?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q7" value="a"> a) Defines the spacing between elements <br>
+                        <input type="radio" name="q7" value="b"> b) Sets the background color of an element <br>
+                        <input type="radio" name="q7" value="c"> c) Controls the font size of text <br>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>8. What is the purpose of the JavaScript function console.log()?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q8" value="a"> a) Display a message to the user in an alert box <br>
+                        <input type="radio" name="q8" value="b"> b) Output information to the browser console <br>
+                        <input type="radio" name="q8" value="c"> c) Create a new HTML element on the page <br>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>9. Which of the following is a block-level HTML element?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q9" value="a"> a) &lt;span&gt; <br>
+                        <input type="radio" name="q9" value="b"> b) &lt;div&gt; <br>
+                        <input type="radio" name="q9" value="c"> c) &lt;a&gt; <br>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>10. What does the acronym API stand for in web development?</p>
+                    <div class="quiz-options">
+                        <input type="radio" name="q10" value="a"> a) Application Programming Interface <br>
+                        <input type="radio" name="q10" value="b"> b) Advanced Programming Interface <br>
+                        <input type="radio" name="q10" value="c"> c) Automated Programming Interface <br>
+                    </div>
+                </div>
+                <!-- Add more questions as needed -->
+
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </section>
+
+        <section class="module" id="result-section">
+            <!-- Quiz Result -->
+            <h2>Quiz Result</h2>
+            <p id="result-message"></p>
+
+            <!-- Next Module Button -->
+            <button id="next-module-btn" onclick="goToNextModule()" style="display:none;">Next Module</button>
+        </section>
+
+    </main>
+
+    <script>
+        function showQuiz() {
+            document.getElementById('quiz-section').style.display = 'block';
+        }
+
+        function submitQuiz(event) {
+            event.preventDefault();
+
+            // Check answers
+            const answers = {
+                q1: 'a',
+                q2: 'a',
+                q3: 'b',
+                q4: 'b',
+                q5: 'b',
+                q6: 'a',
+                q7: 'a',
+                q8: 'b',
+                q9: 'b',
+                q10: 'a',
+
+                // Add more answers as needed
+            };
+
+            const userAnswers = {};
+            const formElements = document.getElementById('quiz-form').elements;
+
+            for (let i = 0; i < formElements.length; i++) {
+                const element = formElements[i];
+                if (element.type === 'radio' && element.checked) {
+                    const questionNumber = element.name;
+                    const answer = element.value;
+                    userAnswers[questionNumber] = answer;
+                }
+            }
+
+            let correctCount = 0;
+
+            for (const questionNumber in userAnswers) {
+                if (userAnswers.hasOwnProperty(questionNumber)) {
+                    const userAnswer = userAnswers[questionNumber];
+                    const correctAnswer = answers[questionNumber];
+
+                    if (userAnswer === correctAnswer) {
+                        correctCount++;
+                    }
+                }
+            }
+
+            // Display result
+            const resultMessage = document.getElementById('result-message');
+            if (correctCount >= 7) {
+                resultMessage.textContent = `Congratulations! You passed Module 1. You answered ${correctCount} questions correctly.`;
+
+                // Show the Next Module button
+                document.getElementById('next-module-btn').style.display = 'block';
+            } else {
+                resultMessage.textContent = `Sorry, you didn't pass Module 1. You need at least 7 correct answers.`;
+
+                // Hide the Next Module button
+                document.getElementById('next-module-btn').style.display = 'none';
+            }
+
+            // Hide the quiz section
+            document.getElementById('quiz-section').style.display = 'none';
+            
+            // Display the result section
+            document.getElementById('result-section').style.display = 'block';
+        }
+        function goToNextModule() {
+            // Redirect to module2_quiz.html
+            window.location.href = 'module2_quiz.html';
+        }
+    </script>
+
+</body>
+</html>

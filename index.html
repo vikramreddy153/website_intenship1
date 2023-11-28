@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Internship</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(14, 210, 102, 0.613);
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            max-width: 13%;
+            width: 13%;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        h1, h2 {
+            color: #000;
+        }
+
+        .module {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 45%;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .quiz-button {
+            padding: 1.3em 3em;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 500;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 45px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+            display: inline-block; /* Added display property */
+        }
+
+        .quiz-button:hover {
+            background-color: #23c483;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        .quiz-button:active {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="logo2.png" alt="Logo">
+        <h1 style="font-size: 150%;">Web Development Internship</h1>
+    </header>
+
+    <main>
+        <section id="module1" class="module">
+            <h2>Module 1: Introduction to Web Development</h2>
+            <p>
+                In this module, you will learn the basics of web development and its importance in today's digital world.
+            </p>
+            <a href="module1_quiz.html" class="quiz-button">Take Quiz</a>
+        </section>
+
+        <section id="module2" class="module">
+            <h2>Module 2: Advanced Web Development</h2>
+            <p>
+                In this module, you will learn advanced web development and its importance in today's digital world.
+            </p>
+            <a href="module2_quiz.html" class="quiz-button">Take Quiz</a>
+        </section>
+
+        <section id="module3" class="module">
+            <h2>Module 3: JavaScript</h2>
+            <p>
+                Explore the dynamic capabilities of JavaScript and its role in enhancing web interactivity.
+            </p>
+            <a href="module3_quiz.html" class="quiz-button">Take Quiz</a>
+        </section>
+
+        <section id="module4" class="module">
+            <h2>Module 4: Frontend Frameworks</h2>
+            <p>
+                Learn about popular frontend frameworks like React, Angular, and Vue.js.
+            </p>
+            <a href="module4_quiz.html" class="quiz-button">Take Quiz</a>
+        </section>
+
+        <section id="module5" class="module">
+            <h2>Module 5: Backend Technologies</h2>
+            <p>
+                Understand the backend technologies such as Node.js, Express, and databases like MongoDB.
+            </p>
+            <a href="module5_quiz.html" class="quiz-button">Take Quiz</a>
+        </section>
+    </main>
+
+</body>
+</html>
