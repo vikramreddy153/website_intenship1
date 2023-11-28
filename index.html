@@ -9,14 +9,14 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('background2.jpg'); /* Replace with the actual path to your background image */
+            background-image: url('background2.jpg');
             background-size: cover;
             background-position: center;
-            color: #000; /* Set text color to black */
+            color: #000;
         }
 
         header {
-            background-color: rgba(14, 210, 102, 0.613); /* Transparent blue color */
+            background-color: rgba(14, 210, 102, 0.613);
             text-align: center;
             padding: 1em 0;
             position: relative;
@@ -26,8 +26,13 @@
             position: absolute;
             top: 10px;
             left: 20px;
-            max-width: 13%;
-            width: 13%;
+            max-width: 11%;
+            width: 11%;
+        }
+
+        h1 {
+            font-size: 150%;
+            margin-top: 0;
         }
 
         main {
@@ -42,8 +47,8 @@
         }
 
         .apply-button {
-            padding: 1.3em 3em;
-            font-size: 12px;
+            padding: 1em 2em;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 2.5px;
             font-weight: 500;
@@ -55,7 +60,7 @@
             transition: all 0.3s ease 0s;
             cursor: pointer;
             outline: none;
-            text-decoration: none; /* Add this line to remove underlines */
+            text-decoration: none;
         }
 
         .apply-button:hover {
@@ -71,13 +76,29 @@
 
         .about-us {
             text-align: left;
-            margin-top: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for better readability */
+            margin-top: 20px;
             padding: 20px;
             border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media screen and (max-width: 600px) {
+            .logo {
+                position: static;
+            }
+
+            h1 {
+                font-size: 120%;
+            }
+
+            .cta {
+                font-size: 1.2em;
+            }
+
+            .apply-button {
+                font-size: 16px;
+                padding: 0.8em 1.5em;
+            }
         }
     </style>
 </head>
@@ -85,7 +106,7 @@
 
     <header>
         <img class="logo" src="logo2.png" alt="VD Tech Logo">
-        <h1 style="font-size: 150%;">Take Your Career to the Next Level with VD Tech</h1>
+        <h1>Take Your Career to the Next Level with VD Tech</h1>
     </header>
 
     <main>
