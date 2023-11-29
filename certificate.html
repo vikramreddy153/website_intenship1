@@ -33,7 +33,6 @@
             font-size: 28px;
             margin-top: 0; /* Adjusted margin-top */
         }
-        }
         .logo {
             margin-top: 10px;
         }
@@ -72,6 +71,8 @@
             cursor: pointer;
         }
     </style>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
 </head>
 <body>
     <div class="container">
@@ -110,11 +111,26 @@
             // If the user enters a name, update the person div with the provided name
             if (fullName !== null && fullName !== "") {
                 document.getElementById('fullName').innerHTML = fullName;
+                
+                // Generate a PDF (if needed for future use)
+                var element = document.querySelector('.container');
+                html2pdf(element);
+
+                // Generate a JPG image and trigger download
+                domtoimage.toBlob(document.querySelector('.container'))
+                    .then(function (blob) {
+                        var link = document.createElement('a');
+                        link.href = URL.createObjectURL(blob);
+                        link.download = fullName + '_Certificate.jpg';
+                        link.click();
+                    });
             }
-    
-            // Redirect to video.html after displaying the alert
-            window.location.href = 'video.html';
         }
-    </script
+
+        // Auto-trigger download on page load (for initial test)
+        // You can remove this in the final version
+        downloadCertificate();
+    </script>
+
 </body>
 </html>
